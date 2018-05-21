@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title></title>
+		<meta name="keywords" content=" " />
+		<meta name="description" content=" " />
+		<link rel="stylesheet" href="css/iconfont/iconfont.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="page page-projects">
+			<!-- 标题栏 -->
+			<header class="bar bar-header">
+				<a href="index.html" class="iconfont icon-logo pull-left"></a>
+				<div class="langs-selector">
+					<div class="lang-cur" id="lang-cur"><span>中文</span><i class="arr"></i></div>
+					<ul class="langs-list" id="langs-list">
+                   		<li class="lang-item cur">中文</li>
+                   		<li class="lang-item">英文</li>
+                    </ul>
+				</div>
+			    <h1 class="title">案例中心</h1>
+			</header>
+
+			<!-- 工具栏 -->
+			<nav class="bar bar-nav">
+				<a href="index.html" class="nav-item">
+					<i class="iconfont icon-home"></i>
+					<span class="tab-label">首页</span>
+				</a>
+				<a href="products.html" class="nav-item">
+					<i class="iconfont icon-product"></i>
+					<span class="tab-label">产品</span>
+				</a>
+				<a href="#" class="nav-item cur">
+					<i class="iconfont icon-project"></i>
+					<span class="tab-label">案例</span>
+				</a>
+				<a href="news.html" class="nav-item">
+					<i class="iconfont icon-news"></i>
+					<span class="tab-label">新闻</span>
+				</a>
+				<a href="contact.html" class="nav-item">
+					<i class="iconfont icon-kefu"></i>
+					<span class="tab-label">联系</span>
+				</a>
+				<a href="about.html" class="nav-item">
+					<i class="iconfont icon-about"></i>
+					<span class="tab-label">墨智</span>
+				</a>
+			</nav>
+
+			<!-- content -->
+            <section class="content">
+            	<div class="content-block mt-0 pt-0 borTop-0">
+            		<ul class="products-list row">
+						<li class="col-50 mt-12">
+							<a href="" class="link-wrap">
+								<img src="images/data.png" alt="">
+								<h4 class="mt-8 font-13">干燥设备干燥设备</h4>
+							</a>
+						</li>
+					</ul>
+            	</div>
+            </section>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(function() {
+				// 版本切换
+				var $langCur = $('#lang-cur'),
+                    $langList = $('#langs-list'),
+                    $langItem = $langList.find('.lang-item')
+                    $arr = $langCur.find('.arr');
+
+                $langCur.on('click', function() {
+                    $langList.slideToggle(300);
+                    $arr.toggleClass('arr-up');
+                });
+
+                $(document).on('click', function(ev) {
+                    if(!$(ev.target).parents($langCur).first().is($langCur)) {
+                        $langList.slideUp(300);
+                        $arr.removeClass('arr-up');
+                    }
+                });
+			});
+		</script>
+	</body>
+</html>

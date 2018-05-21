@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title></title>
+		<meta name="keywords" content=" " />
+		<meta name="description" content=" " />
+		<link rel="stylesheet" href="css/iconfont/iconfont.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="page page-products">
+			<!-- 标题栏 -->
+			<!-- <header class="bar bar-header">
+				<em class="iconfont icon-logo pull-left"></em>
+				<div class="langs-selector">
+					<div class="lang-cur" id="lang-cur"><span>中文</span><i class="arr"></i></div>
+					<ul class="langs-list" id="langs-list">
+                   		<li class="lang-item cur">中文</li>
+                   		<li class="lang-item">英文</li>
+                    </ul>
+				</div>
+				<a href="#" class="search-head"><i class="iconfont icon-search pr-4"></i>请输入关键字</a>
+			</header> -->
+
+
+			<!-- 工具栏 -->
+		
+			<!-- 左边一级导航 -->
+			<div class="left-menu-bar">
+				<ul class="tab-links">
+					<li class="l-menu-it cur">aaa</li>
+					<li class="l-menu-it">bbb</li>
+					<li class="l-menu-it">ccc</li>
+					<li class="l-menu-it">ddd</li>
+				</ul>
+			</div>
+			
+			<!-- content -->
+            <section class="content">
+            	<div>
+            		<!-- 干燥设备 -->
+            		<ul class="products-content" id="ganzao" style="display: block;">
+						<li class="products-list">
+							aaa
+						</li>
+					</ul>
+					<!-- 制药设备 -->
+            		<ul class="products-content" id="zhiyao">
+						<li class="products-list">
+							bbb
+						</li>
+					</ul>
+					<!-- 备品备件 -->
+            		<ul class="products-content" id="beiping">
+						<li class="products-list">
+							ccc
+						</li>
+					</ul>
+					<!-- 无机粉体 -->
+            		<ul class="products-content" id="fenti">
+						<li class="products-list">
+							ddd
+						</li>
+					</ul>
+            	</div>				
+            </section>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/router.js"></script>
+		<script>
+			// 首页分类入口tab切换
+			var router = new Router();
+		    router.on('/zhiyao', display);
+		    router.on('/beiping', display);
+		    router.on('/fenti', display);
+		    router.init();
+
+		    function display() {
+		    	var id = location.hash.slice(2),
+		    		$item = $('#' + id);
+
+		    	if(!$item) return;
+		    	
+		    	$('.l-menu-it').removeClass('cur').eq($item.index()).addClass('cur');
+		    	$('#ganzao').hide();
+		        $item.show();		    	
+		    }
+
+			$(function() {
+				// tab切换
+				$('.l-menu-it').click(function() {
+					var index = $(this).index();
+
+					var $prods = $('.products-content').eq(index);
+					if(!$prods) return;
+
+					$(this).addClass('cur').siblings().removeClass('cur');
+
+					$prods.show().siblings().hide();
+				});
+			});
+		</script>
+	</body>
+</html>

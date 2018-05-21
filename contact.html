@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title></title>
+		<meta name="keywords" content=" " />
+		<meta name="description" content=" " />
+		<link rel="stylesheet" href="css/iconfont/iconfont.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="page page-contact">
+				<!-- 标题栏 -->
+				<header class="bar bar-header">
+					<a href="index.html" class="iconfont icon-logo pull-left"></a>
+					<div class="langs-selector">
+						<div class="lang-cur" id="lang-cur"><span>中文</span><i class="arr"></i></div>
+						<ul class="langs-list" id="langs-list">
+	                   		<li class="lang-item cur">中文</li>
+	                   		<li class="lang-item">英文</li>
+	                    </ul>
+					</div>
+				    <h1 class="title">联系墨智</h1>
+				</header>
+
+				<!-- 工具栏 -->
+				<nav class="bar bar-nav">
+					<a href="index.html" class="nav-item">
+						<i class="iconfont icon-home"></i>
+						<span class="tab-label">首页</span>
+					</a>
+					<a href="products.html" class="nav-item">
+						<i class="iconfont icon-product"></i>
+						<span class="tab-label">产品</span>
+					</a>
+					<a href="projects.html" class="nav-item">
+						<i class="iconfont icon-project"></i>
+						<span class="tab-label">案例</span>
+					</a>
+					<a href="news.html" class="nav-item">
+						<i class="iconfont icon-news"></i>
+						<span class="tab-label">新闻</span>
+					</a>
+					<a href="#" class="nav-item cur">
+						<i class="iconfont icon-kefu"></i>
+						<span class="tab-label">联系</span>
+					</a>
+					<a href="about.html" class="nav-item">
+						<i class="iconfont icon-about"></i>
+						<span class="tab-label">墨智</span>
+					</a>
+				</nav>
+
+				<!-- content -->
+				<section class="content">
+					<!-- 地图 -->
+					<div id="map"></div>
+
+					<div class="content-block mt-0 borTop-0">
+						<h2 class="font-18 font-b mt-14">常州墨智机械有限公司</h2>
+						<!-- 联系方式 -->
+						<ul class="infor-list color-gray mt-20">
+							<li class="mt-14"><span class="fl">联系人：</span>联系人联系人</li>
+							<li class="mt-14"><span class="fl">手&nbsp;&nbsp;&nbsp;&nbsp;机：</span>12534464646</li>
+							<li class="mt-14"><span class="fl">电&nbsp;&nbsp;&nbsp;&nbsp;话：</span>12534464646</li>
+							<li class="mt-14"><span class="fl">传&nbsp;&nbsp;&nbsp;&nbsp;真：</span>12534464646</li>
+							<li class="mt-14"><span class="fl">邮&nbsp;&nbsp;&nbsp;&nbsp;箱：</span>12534464646</li>
+							<li class="mt-14"><span class="fl">地&nbsp;&nbsp;&nbsp;&nbsp;址：</span>中国江苏常州市天宁区诺诚高第商务广场</li>
+							<li class="mt-14"><span class="fl">网&nbsp;&nbsp;&nbsp;&nbsp;址：</span>12534464646</li>
+							<li class="mt-14"><span class="fl">邮&nbsp;&nbsp;&nbsp;&nbsp;编：</span>12534464646</li>
+						</ul>
+
+						<!-- 联系按钮 -->
+						<div class="mt-40">
+							<h3 class="title-line">在线咨询</h3>
+							<ul class="row mt-24">
+								<li class="col-50">
+									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2750290452&site=qq&menu=yes" id="serviceQQ" class="iconImg-service">QQ客服</a>
+								</li>
+								<li class="col-50">
+									<a href="tel:13585323735" href="" id="servicePhone" class="iconImg-service">拨打电话</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 立即咨询 -->
+						<div class="mt-40">
+							<h3 class="title-line">留言咨询</h3>
+							<form>
+								<ul class="form-group">
+									<li><input type="text" class="inp" placeholder="请填写联系人"><label class="iconfont icon-user"></label></li>
+									<li><input type="text" class="inp" placeholder="请填写手机号"><label class="iconfont icon-phone"></label></li>
+									<li><input type="number" class="inp" placeholder="请填写邮箱"><label class="iconfont icon-email"></label></li>
+									<li><textarea placeholder="请填写咨询内容" rows="4"></textarea></li>
+									<li><input type="submit" value="提  交" class="button"></li>
+								</ul>
+							</form>
+						</div>
+					</div>
+				</section>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.3&key=52cd343bff01df47681c6647babe66bc"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				"use strict";
+				$('#map').oSetMap({
+					addr: '江苏省常州市钟楼区御水华庭',
+					city: '0519',
+					icon: 'images/mark_bs.png',
+					zoom: 14
+				});
+
+				// 版本切换
+				var $langCur = $('#lang-cur'),
+                    $langList = $('#langs-list'),
+                    $langItem = $langList.find('.lang-item')
+                    $arr = $langCur.find('.arr');
+
+                $langCur.on('click', function() {
+                    $langList.slideToggle(300);
+                    $arr.toggleClass('arr-up');
+                });
+
+                $(document).on('click', function(ev) {
+                    if(!$(ev.target).parents($langCur).first().is($langCur)) {
+                        $langList.slideUp(300);
+                        $arr.removeClass('arr-up');
+                    }
+                });
+			});
+		</script>
+	</body>
+</html>

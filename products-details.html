@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<title></title>
+		<meta name="keywords" content=" " />
+		<meta name="description" content=" " />
+		<link rel="stylesheet" href="css/iconfont/iconfont.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	</head>
+
+	<body>
+		<div class="page page-prodDetails">
+			<!-- 标题栏 -->
+			<header class="bar bar-header">
+				<a href="products-subList.html" class="bar-btn iconfont icon-back pull-left"></a>
+				<div class="langs-selector">
+					<div class="lang-cur" id="lang-cur"><span>中文</span><i class="arr"></i></div>
+					<ul class="langs-list" id="langs-list">
+                   		<li class="lang-item cur">中文</li>
+                   		<li class="lang-item">英文</li>
+                    </ul>
+				</div>
+				<h1 class="title">产品详情</h1>
+			</header>
+
+			<!-- content -->
+            <section class="content">
+            	<!-- banner -->
+				<div class="swiper-container" id="product-pics">
+				    <ul class="swiper-wrapper">
+				    	<li class="swiper-slide"><img src="images/beiping.png" alt=""></li>
+				    	<li class="swiper-slide"><img src="images/data.png" alt=""></li>
+				    	<li class="swiper-slide"><img src="images/ganzao.png" alt=""></li>
+				    </ul>
+				    <div class="swiper-pagination" id="Pagectrl"></div>
+				</div>
+				<div class="content-block mt-0 borTop-0">
+					<h2>产品产品产品产品产品产品产品产品产品产品</h2>
+					<ul>
+						
+					</ul>
+				</div>
+				
+				<!-- 富文本 -->
+				<div class="content-block">
+					<h3 class="title-line">产品详情</h3>
+					<div class="plr-14 l-15 mt-15">
+						富文本富文本富文本富文本富文本富文本富文本富文本富文本富文
+						<img src="images/banner3.jpg"/>本富文本富文本富文本富文本富文本富文本
+					</div>
+				</div>
+				
+				<!-- 立即咨询 -->
+				<div class="content-block">					
+					<h3 class="title-line">留言咨询</h3>
+					<form>
+						<ul class="form-group">
+							<li><input type="text" class="inp" placeholder="请填写联系人"><label class="iconfont icon-user"></label></li>
+							<li><input type="text" class="inp" placeholder="请填写手机号"><label class="iconfont icon-phone"></label></li>
+							<li><input type="number" class="inp" placeholder="请填写邮箱"><label class="iconfont icon-email"></label></li>
+							<li><textarea placeholder="请填写咨询内容" rows="4"></textarea></li>
+							<li><input type="submit" value="提  交" class="button"></li>
+						</ul>
+					</form>
+				</div>
+            </section>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script>
+			$(function() {
+				var topSwiper = new Swiper('#product-pics', {
+					speed: 500,
+					autoplay: 3000,
+					autoplayDisableOnInteraction: false,
+					loop: true,
+			        pagination: '#Pagectrl',
+			        paginationClickable: true
+				})
+
+				// 版本切换
+				var $langCur = $('#lang-cur'),
+                    $langList = $('#langs-list'),
+                    $langItem = $langList.find('.lang-item')
+                    $arr = $langCur.find('.arr');
+
+                $langCur.on('click', function() {
+                    $langList.slideToggle(300);
+                    $arr.toggleClass('arr-up');
+                });
+
+                $(document).on('click', function(ev) {
+                    if(!$(ev.target).parents($langCur).first().is($langCur)) {
+                        $langList.slideUp(300);
+                        $arr.removeClass('arr-up');
+                    }
+                });
+			});
+		</script>
+	</body>
+</html>

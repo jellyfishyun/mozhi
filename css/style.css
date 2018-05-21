@@ -1,0 +1,323 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*banner*/
+.swiper-container {
+	font-size: 0;
+}
+
+.swiper-container img {
+	max-height: 100%;
+}
+
+.swiper-container-horizontal>.swiper-pagination {
+	bottom: .25rem!important;
+}
+
+.page-index .swiper-pagination-bullet {
+	width: 16px;
+	height: 2px;
+	border-radius: 0
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #fff!important
+}
+
+/*导航菜单*/
+.page-index .nav-block {
+	padding-top: .45rem;
+	padding-bottom: .35rem;
+}
+
+.page-index .nav-block .nav-lk {
+	display: block;
+	margin: .4rem 0;
+	font-size: .6rem;
+	color: #666;
+	text-align: center;
+}
+
+.page-index .nav-block .nav-icon {
+	display: block;
+	width: 2.8rem;
+	height: 2.8rem;
+	margin: 0 auto .35rem;
+	font-style: normal;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#lk-ganzao .nav-icon {
+	background-image: url(../images/ganzao.png);
+}
+
+#lk-zhiyao .nav-icon {
+	background-image: url(../images/zhiyao.png);
+}
+
+#lk-beiping .nav-icon {
+	background-image: url(../images/beiping.png);
+}
+
+#lk-fenti .nav-icon {
+	background-image: url(../images/fenti.png);
+}
+
+/*首页标题*/
+.title-index {
+	padding-top: .75rem;
+	font-size: .8rem;
+	font-weight: 600;
+	color: #222;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.title-index span {
+	display: inline-block;
+	position: relative;	
+}
+
+.title-index span:before, .title-index span:after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	width: .85rem;
+	height: 1px;
+	z-index: 2
+}
+
+.title-index span:before {
+	left: -1.35rem;
+	background: -webkit-linear-gradient(left, #eee, #999);
+}
+
+.title-index span:after {
+	right: -1.35rem;
+	background: -webkit-linear-gradient(left, #999, #eee);
+}
+
+/* 产品列表 */
+.products-list .col-50 .link-wrap {
+	padding: .2rem .2rem .35rem .2rem;
+	border: 1px solid #eee;
+}
+
+.products-list .col-50 img {
+	display: block;
+	width: 100%;
+	height: 6.5rem
+}
+
+/* 新闻列表 */
+.news-list .item-media {
+	width: 5.5rem;
+    height: 3.5rem;
+}
+
+.news-list.media-list .item-title {
+	width: 65%;
+}
+
+/* 走进墨智 */
+.about-block h2 {
+	position: relative;
+	color: #222;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+.about-block h2:after {
+	display: block;
+	content: " ";
+	width: 2rem;
+	height: 3px;
+	margin-top: .5rem;
+	background-color: #333;
+}
+
+.about-block p {
+	height: 4.6rem;
+	font-size: .65rem;
+	line-height: 1.15rem;
+	color: #666;
+	white-space: normal!important;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow : hidden;
+}
+
+.page-index .company-pic {
+	margin: -.7rem -.7rem .7rem -.7rem;
+	height: 8.5rem;
+}
+
+.page-index .company-pic img {
+	height: 100%;
+}
+
+.more-index {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	color: #999;
+	border: 1px solid #aaa;
+	border-radius: 50%
+}
+
+.more {
+	float: right;
+	margin-top: .2px;
+	font-size: .8rem;
+	color: #999;
+	-webkit-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
+}
+
+/* =========== 产品中心 =========== */
+.page-products, .page-subProducts {
+	background-color: #fff;
+}
+
+.left-menu-bar {
+	position: absolute;
+	top: 2.2rem;
+	bottom: 0;
+	left: 0;
+	width: 4rem;
+	background-color: #f2f2f2
+}
+
+.left-menu-bar ~ .content {
+	left: 4rem;
+}
+
+.l-menu-it {
+	padding: .9rem 0 .85rem;
+	text-align: center;
+}
+
+.l-menu-it.cur {
+	color: #ff9800;
+	background-color: #fff;
+}
+
+.title-line {
+	position: relative;	
+	padding-left: .75rem;
+	font-size: .8rem;
+	font-weight: 500;
+}
+
+.title-line:before {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: .7rem;
+	width: .2rem;
+	margin-top: -.3rem;
+	background-color: #ff9800;
+}
+
+.page-products .title-line {
+	margin-top: .9rem;
+	margin-bottom: .2rem;
+	font-size: .7rem;
+}
+
+.page-products .title-line:before {
+	height: .6rem;
+	margin-top: -.28rem;
+}
+
+.products-content {
+	display: none;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.page-products .products-list img {
+	height: 5rem;
+}
+
+.page-products .products-list {
+	position: relative;
+	padding-bottom: .9rem;
+}
+
+.page-products .products-list:after {
+	content: " ";
+	position: absolute;
+	left: -.5rem;
+	right: -.5rem;
+	bottom: 0;
+	height: 4px; 
+	background-color: #f2f2f2
+}
+
+/* =========== 产品详情 =========== */
+#product-pics img {
+	height: 8rem;
+}
+
+.page-prodDetails h2, .page-newsDetails h2 {
+	line-height: 1.5;
+	font-size: .8rem;
+	font-weight: 600;
+}
+
+.page-newsDetails .news-time {	
+	padding-bottom: .9rem;
+	font-size: .6rem;
+	color: #999;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+/* =========== 联系墨智 =========== */
+.page-contact .content-block {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#map {
+	height: 12rem
+}
+
+.iconImg-service {
+	display: block;
+	width: 4.5rem;
+	height: 6rem;
+	margin: 0 auto;
+	padding-top: 5rem;
+	font-size: .65rem;
+	color: #999;
+	text-align: center;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#serviceQQ {
+	background-image: url(../images/icon-contact1.png);
+}
+
+#servicePhone {
+	background-image: url(../images/icon-contact2.png);
+}
+
+/* =========== 关于墨智 =========== */
+.page-about .content-block {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	line-height: 1.5;
+	text-align: justify;
+}
